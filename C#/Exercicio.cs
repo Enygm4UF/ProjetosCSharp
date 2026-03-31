@@ -7,20 +7,16 @@ namespace Exercicio
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Digite a largura do terreno retangular: ");
-            double largura = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            string nm1, nm2;
+            int idade1, idade2;
 
-            Console.WriteLine("Digite a altura do terreno retangular: ");
-            double altura = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-
-            Console.WriteLine("Digite o valor do metro quadrado: ");
-            double valor = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-
-            double area = largura * altura;
-            double preco = area * valor;
-
-            Console.WriteLine("Área = " + area.ToString("F2", CultureInfo.InvariantCulture));
-            Console.WriteLine("Preço = " + preco.ToString("F2", CultureInfo.InvariantCulture));
+            string[] vet = Console.ReadLine().Split(' ');
+            nm1 = vet[0];
+            idade1 = int.Parse(vet[1]);
+            nm2 = vet[2];
+            idade2 = int.Parse(vet[3]);
+            double media = (double) (idade1 + idade2) / 2.0;
+            Console.WriteLine("Média das idades: " + media.ToString("F1", CultureInfo.InvariantCulture));
         }
     }
 }
